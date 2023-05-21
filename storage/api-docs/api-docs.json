@@ -14,7 +14,7 @@
                 "tags": [
                     "Generate Auth Token Jwt"
                 ],
-                "summary": "Cria um token de acesso",
+                "summary": "Cria um token de acesso para rotas projegidas",
                 "operationId": "4fa475a5ae4135f7641321d9aea853ab",
                 "responses": {
                     "200": {

@@ -21,7 +21,7 @@ class AuthController extends Controller
      * @OA\Get(
      *     path="/api/auth",
      *     tags={"Generate Auth Token Jwt"},
-     *     summary="Cria um token de acesso", 
+     *     summary="Cria um token de acesso para rotas projegidas", 
      *     @OA\Response(
      *         response=200,
      *         description="OK"
