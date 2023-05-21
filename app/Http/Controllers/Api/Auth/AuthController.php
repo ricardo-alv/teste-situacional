@@ -17,6 +17,19 @@ class AuthController extends Controller
         $this->jwt = $jwt;
     }
 
+    /**
+     * @OA\Get(
+     *     path="/api/auth",
+     *     tags={"Generate Auth Token Jwt"},
+     *     summary="Cria um token de acesso", 
+     *     @OA\Response(
+     *         response=200,
+     *         description="OK"
+     *     )
+     * )
+     *
+     */
+
     public function index()
     {
         $token =  $this->jwt->generateToken();

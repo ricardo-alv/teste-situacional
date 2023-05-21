@@ -1,0 +1,89 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Laravel Users Api",
+        "contact": {
+            "email": "ricardoalv.88@gmail.com"
+        },
+        "version": "1.0"
+    },
+    "paths": {
+        "http://127.0.0.1:8000/api": {},
+        "/api/auth": {
+            "get": {
+                "tags": [
+                    "Generate Auth Token Jwt"
+                ],
+                "summary": "Cria um token de acesso",
+                "operationId": "4fa475a5ae4135f7641321d9aea853ab",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/api/users": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Retornando todos os usuários cadastrado no banco de dados",
+                "operationId": "ac4677cdc04c8254bc8e5b4bc1ea8607",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/users/{id}": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Retornando apenas um usuário especifico informado pelo id caso não tenha retorna vazio",
+                "operationId": "eb5bb5660985e3682daa6b84e616e5b0",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Parametro id usuário",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "examples": {
+                            "int": {
+                                "summary": "id usuário",
+                                "value": "1"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer"
+            }
+        }
+    }
+}
