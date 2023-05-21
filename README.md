@@ -48,6 +48,10 @@ Iniciar o servidor:
 ```sh
 php artisan serve
 ```
+Acessar a doc Swagger:
+```sh
+http://127.0.0.1:8000/api/doc
+```
 Para executar todos os test:
 ```sh
 php artisan test
