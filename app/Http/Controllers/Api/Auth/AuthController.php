@@ -8,13 +8,15 @@ use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
+    /** Criando e retornando token validado por 24hr **/
+
     private $jwt;
 
     public function __construct(TokenJwt $jwt)
     {
         $this->jwt = $jwt;
     }
- 
+
     public function index()
     {
         $token =  $this->jwt->generateToken();
